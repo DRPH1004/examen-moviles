@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title>{{nombreTienda}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main-card">
+  <ion-grid>
+<ion-row>
+  <ion-col>
+    <ion-card color="secondary"  (click)="iraProductos()">
+    <img alt="Productos" src="https://i1.wp.com/noticieros.televisa.com/wp-content/uploads/2019/10/productos-del-super.jpg" />
+    <ion-card-header>
+      <ion-card-title>Productos</ion-card-title>
+      <!--ion-card-subtitle>Card Subtitle</ion-card-subtitle-->
+    </ion-card-header>
+    <ion-card-content>
+      Agrega, edita y elimina los productos de tu tienda
+    </ion-card-content>
+  </ion-card>
+  </ion-col>
+
+  <ion-col>
+    <ion-card color="secondary" (click)="iraClientes()">
+      <img alt="Clientes" src="https://blogcomparasoftware-192fc.kxcdn.com/wp-content/uploads/2021/02/tipos-de-clientes-de-ecommerce-1-1536x864.png" />
+      <ion-card-header>
+        <ion-card-title>Clientes</ion-card-title>
+        <!--ion-card-subtitle>Card Subtitle</ion-card-subtitle-->
+      </ion-card-header>
+    
+      <ion-card-content>
+        Agrega, edita y elimina los clientes de tu tienda
+      </ion-card-content>
+    </ion-card>
+  </ion-col>
+</ion-row>
+
+<ion-row>
+  <ion-col>
+    <ion-card color="secondary"(click)="iraVender()">
+      <img alt="Vender" src="https://http2.mlstatic.com/storage/developers-site-cms-admin/CDV_MS/277787456625-210723-mla-mco-mlm-mlc-mlb-como-motivar-a-los-clientes-a-comprar-mas-header--1-.png" />
+      <ion-card-header>
+        <ion-card-title>Vender</ion-card-title>
+        <!--ion-card-subtitle>Card Subtitle</ion-card-subtitle-->
+      </ion-card-header>
+      <ion-card-content>
+        Aqui puedes seleccionar a tu cliente y venderle productos
+            </ion-card-content>
+    </ion-card>
+  </ion-col>
+
+  <ion-col>
+    <ion-card color="secondary" (click)="iraReportes()"  >
+      <img alt="Reportes" src="https://cursos.eltiempo.com/wp-content/uploads/2021/06/Como-hacer-una-estrategia-de-ventas-en-el-mundo-digital--1024x600.png" />
+      <ion-card-header>
+        <ion-card-title>Reportes</ion-card-title>
+        <!--ion-card-subtitle>Card Subtitle</ion-card-subtitle-->
+      </ion-card-header>
+    
+      <ion-card-content>
+        Puedes saber cuanto as vendido en un periodo dado
+            </ion-card-content>
+    </ion-card>
+  </ion-col>
+</ion-row>
+</ion-grid>
+  </div>
+</ion-content>

@@ -1,0 +1,52 @@
+<ion-header> 
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Agregar clientes</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="guardarProducto(producto)">
+        <ion-icon slot="start" name="save"></ion-icon>
+        Guardar
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+
+  <ion-list>
+    <ion-item>
+      <ion-label position="stacked">Nombre</ion-label>
+      <ion-input [clearInput]="true" placeholder="Captura el nombre del cliente" [(ngModel)]="producto.nombre"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Domicilio</ion-label>
+      <ion-input [clearInput]="true" placeholder="Captura el Domicilio del cliente" [(ngModel)]="producto.domicilio"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">telefono</ion-label>
+      <ion-input type="number" [clearInput]="true" placeholder="Captura el numero de telefono" [(ngModel)]="producto.telefono"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="stacked">correo</ion-label>
+      <ion-input  [clearInput]="true" placeholder="Captura el correo " [(ngModel)]="producto.correo"></ion-input>
+    </ion-item>
+     
+    <ion-item>
+      <ion-label position="stacked">Imagen del cliente</ion-label>
+      <ion-input [clearInput]="true" placeholder="Captura el URL de la imagen del cliente" [(ngModel)]="producto.urlfoto"></ion-input>
+    </ion-item>
+   
+    <ion-item>
+      <div style="text-align: center;">
+        <img alt="{{producto.nombre}}" src="{{producto.urlfoto}}" width="300px" />
+      </div>
+    </ion-item>
+  
+  </ion-list>
+  </ion-content>
+  

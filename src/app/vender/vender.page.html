@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Vender
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding="true">
+  <ion-list>
+    <ion-list-header>Venta de Productos</ion-list-header>
+
+    <ion-item>
+      <ion-label>clientes</ion-label>
+      <ion-select [interfaceOptions]="customAlertOptions" interface="alert" placeholder="Selecciona una"
+        [(ngModel)]="operacioncliente">
+        <ion-select-option value={{clientes.nombre}} *ngFor="let clientes of registros">{{clientes.nombre}}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>productos</ion-label>
+      <ion-select [interfaceOptions]="customAlertOptions" interface="alert" placeholder="Selecciona una"
+        [(ngModel)]="operacionproducto">
+        <ion-select-option value={{producto.nombre}} *ngFor="let producto of registros2">
+          {{producto.nombre}} hay {{producto.cantidad}} pz </ion-select-option>
+      </ion-select>
+
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label>Cantidad de unidades que comprara</ion-label>
+    </ion-item>
+    <ion-input type="number" [clearInput]="true" placeholder="Captura el numero de la cantidad que desea"
+      [(ngModel)]="cantidadquequiere" *ngFor="let item of registros2; let ultimo = last;">
+    </ion-input>
+
+  </ion-list>
+
+  <ion-button expand="block" color="primary" (click)="botonvender()">vender</ion-button>
+  <p><span [innerHTML]="resultado"></span></p>

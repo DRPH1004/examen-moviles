@@ -1,0 +1,7 @@
+{
+  "name": "latienda",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

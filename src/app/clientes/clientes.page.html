@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>clientes</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="agregarProducto()">
+        <ion-icon slot="start" name="add"></ion-icon>
+        Agregar        
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+  <ion-row> 
+  <ion-col *ngFor="let producto of registros">   
+  <ion-card  (click)="Editar(producto)">
+    <img alt="{{producto.nombre}}" src="{{producto.urlfoto}}" height="200px" />
+    <ion-card-header>
+      <ion-card-title>{{producto.nombre}}</ion-card-title>
+      <ion-card-subtitle>{{producto.domicilio}}</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-text color="tertiary">
+        <h1>#{{producto.telefono}}</h1>
+        <h2>correo: {{producto.correo}}</h2>
+      </ion-text>  
+    </ion-card-content>
+  </ion-card>
+  </ion-col>
+  </ion-row>
+  </ion-grid>
+  
+</ion-content>

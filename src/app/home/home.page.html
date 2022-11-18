@@ -1,0 +1,48 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="tertiary">
+    <ion-title >
+      Ventas<br>Casa por Casa
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar color="warning">
+      <ion-title size="large">Venta casa por casa</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-label>rafa </ion-label>
+
+
+  <!--div id="container"-->
+    
+      
+        <ion-list>
+      
+          <ion-item>
+            <ion-label position="stacked">Usuario</ion-label>
+            <ion-input [clearInput]="true" placeholder="Teclea tu nombre de usuario" [(ngModel)]="nombre"></ion-input>
+          </ion-item>
+        
+         
+          <ion-item>
+            <ion-label position="stacked">Contraseña</ion-label>
+            <ion-input type="password" placeholder="Teclea tu contraseña" [(ngModel)]="contrasena"></ion-input>
+          </ion-item>
+ 
+        <ion-item>
+          <ion-checkbox slot="start"></ion-checkbox>
+          <ion-label>Recordar los datos</ion-label>
+        </ion-item>
+      </ion-list> 
+
+    <div style="text-align: center;">
+      <ion-button color="primary" (click)="Entrar()">Entrar</ion-button>
+    </div>
+    <div style="text-align: center;"> 
+      <ion-button size="small" color="secondary">Registrarme</ion-button>
+    </div>
+
+</ion-content>

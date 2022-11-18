@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Editar Productos</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="Eliminar(producto.id)">
+        <ion-icon slot="start" name="trash"></ion-icon>
+        Eliminar
+      </ion-button>
+      <ion-button (click)="Guardar(producto)">
+        <ion-icon slot="start" name="save"></ion-icon>
+        Actualizar
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+<ion-list>
+  <ion-item>
+    <ion-label position="stacked">Nombre</ion-label>
+    <ion-input [clearInput]="true" placeholder="Captura el nombre del producto" [(ngModel)]="producto.nombre"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Descripción</ion-label>
+    <ion-input [clearInput]="true" placeholder="Captura la descripción del product" [(ngModel)]="producto.descripcion"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Cantidad de unidades</ion-label>
+    <ion-input type="number" [clearInput]="true" placeholder="Captura el numero de productos" [(ngModel)]="producto.cantidad"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Precio de costo</ion-label>
+    <ion-input type="number" step="any" [clearInput]="true" placeholder="Cuanto te costo el producto" [(ngModel)]="producto.preciodecosto"></ion-input>
+  </ion-item>
+ 
+  <ion-item>
+    <ion-label position="stacked">Precio de venta</ion-label>
+    <ion-input type="number" step="any" [clearInput]="true" placeholder="En cuanto lo venderas" [(ngModel)]="producto.preciodeventa"></ion-input>
+  </ion-item>
+ 
+  <ion-item>
+    <ion-label position="stacked">Imagen del producto</ion-label>
+    <ion-input [clearInput]="true" placeholder="Captura el URL de la imagen producto" [(ngModel)]="producto.urldeproducto"></ion-input>
+  </ion-item>
+ 
+  <ion-item>
+    <div style="text-align: center;">
+      <img alt="{{producto.descripcion}}" src="{{producto.urldeproducto}}" width="300px" />
+    </div>
+  </ion-item>
+
+</ion-list>
+</ion-content>
